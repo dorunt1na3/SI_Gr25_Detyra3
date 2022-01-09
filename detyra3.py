@@ -23,3 +23,35 @@ REFRESH_DELAY = 1500 # Window update delay in ms.
 
 ## Variablat dalese
 last_upload, last_download, upload_speed, down_speed = 0, 0, 0, 0
+
+## Krijimi i window
+window = tk.Tk()
+
+window.title("Monitorimi i bandwidth")  # Titulli
+window.geometry(f"{WINDOW_SIZE[0]}x{WINDOW_SIZE[1]}")  # Madhesua
+window.resizable(width = WINDOW_RESIZEABLE, height = WINDOW_RESIZEABLE)  # Not resizable
+
+label_total_upload_header = tk.Label(text = "Totali Upload:", font = "Quicksand 12 bold")
+label_total_upload_header.pack()
+label_total_upload = tk.Label(text = "Duke kalkuluar...", font = "Quicksand 12")
+label_total_upload.pack()
+
+label_total_download_header = tk.Label(text = "Totali Download:", font = "Quicksand 12 bold")
+label_total_download_header.pack()
+label_total_download = tk.Label(text = "Duke kalkuluar...", font = "Quicksand 12")
+label_total_download.pack()
+
+label_total_usage_header = tk.Label(text = "Totali Usage:", font = "Quicksand 12 bold")
+label_total_usage_header.pack()
+label_total_usage = tk.Label(text = "Duke kalkuluar...\n", font = "Quicksand 12")
+label_total_usage.pack()
+
+label_upload_header = tk.Label(text = "Upload:", font = "Quicksand 12 bold")
+label_upload_header.pack()
+label_upload = tk.Label(text = "Duke kalkuluar...", font = "Quicksand 12")
+label_upload.pack()
+
+label_download_header = tk.Label(text = "Download:", font = "Quicksand 12 bold")
+label_download_header.pack()
+label_download = tk.Label(text = "Duke kalkuluar...", font = "Quicksand 12")
+label_download.pack()
